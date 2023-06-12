@@ -9,7 +9,7 @@
 
   .content{
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.2);
-    width: 30%;
+    width: 40%;
   }
 
   .content img{
@@ -22,3 +22,32 @@
     font-size: small;
     padding: 2%;
   }
+
+  .scoreContainer{
+    margin-left: 5%;
+    margin-bottom: 5%;
+  }
+
+  .scoreContainer h5{
+    font-size: small;
+    padding-bottom: 2%;
+  }
+
+  .scoreContainer div{
+    display: flex;
+    align-items: center;
+  }
+
+  .dropdown{
+    padding-left: 2%;
+  }
+
+  .buttonsContainer{
+    display: flex;
+    width: 100%;
+  }
+
+  .buttonsContainer button {
+    flex: 1;
+  }
+
