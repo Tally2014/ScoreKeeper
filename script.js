@@ -38,24 +38,36 @@ p2button.addEventListener('click', function(){
 });
 
 resetButton.addEventListener('click', function(){
-  player1h1.innerText = "0";
-  player2h1.innerText = "0";
-  textColor(player1h1.innerText,player2h1.innerText);
+  reset();
 });
 
 function textColor(val1,val2){
   if(parseInt(val1)>parseInt(val2)){
-    console.log('player 1 bigger');
+    //console.log('player 1 bigger');
     player1h1.style.color = "green";
     player2h1.style.color = "red";
+    if(parseInt(val1) === parseInt(maxScore)){
+      alert('Player 1 wins');
+      reset();
+    }
 
   }else if(parseInt(val1)<parseInt(val2)){
-    console.log('player 2 bigger');
+    //console.log('player 2 bigger');
     player2h1.style.color = "green";
     player1h1.style.color = "red";
+    if(parseInt(val2) === parseInt(maxScore)){
+      alert('Player 2 wins');
+      reset();
+    }
   }else{
-    console.log('equal');
+    //console.log('equal');
     player1h1.style.color = "black";
     player2h1.style.color = "black";
   }
+}
+
+function reset(){
+  player1h1.innerText = "0";
+  player2h1.innerText = "0";
+  textColor(player1h1.innerText,player2h1.innerText);
 }
